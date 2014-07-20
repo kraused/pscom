@@ -23,7 +23,7 @@ check_PROGRAMS = list_test
 
 TESTS = list_test
 
-bin_PROGRAMS = pscom_pp p4stat pspipe p4tcp psport4_pp psock_pp
+bin_PROGRAMS = pscom_pp pscom_bw pscom_bibw p4stat pspipe p4tcp psport4_pp psock_pp
 
 noinst_HEADERS = dump.c psport_util.h
 
@@ -114,6 +114,12 @@ pscom_ondemand_LDADD = $(libpscom) -lpopt
 
 pscom_pp_SOURCES = pscom_pp.c
 pscom_pp_LDADD = $(libpscom) -lpopt
+
+pscom_bw_SOURCES = pscom_bw.c
+pscom_bw_LDADD = $(libpscom)
+
+pscom_bibw_SOURCES = pscom_bibw.c
+pscom_bibw_LDADD = $(libpscom)
 
 pscom_bcast_test_SOURCES = pscom_bcast_test.c
 pscom_bcast_test_LDADD = $(libpscom) -lpopt
